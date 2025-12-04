@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rushda Esmael - Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Poppins', sans-serif; scroll-behavior:smooth; overflow-x:hidden; background:#e3f2fd; color:#333; }
+
+/* Navbar */
+nav { position:fixed; width:100%; top:0; left:0; display:flex; justify-content:space-between; align-items:center; padding:15px 50px; background:rgba(255,255,255,0.95); backdrop-filter:blur(10px); border-bottom:1px solid #ccc; z-index:1000; }
+nav .logo { font-size:1.8rem; font-weight:700; color:#00796B; font-family:'Orbitron',sans-serif; }
+nav ul { display:flex; gap:25px; }
+nav ul li { list-style:none; }
+nav ul li a { color:#333; font-weight:500; transition:0.3s; }
+nav ul li a:hover { color:#17d3a4; }
+
+/* Hero */
+#hero { position:relative; display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh; text-align:center; overflow:hidden; }
+#hero img { width:250px; height:250px; border-radius:50%; border:5px solid #00796B; margin-bottom:20px; object-fit:cover; box-shadow:0 10px 30px rgba(0,0,0,0.2); animation:fadeIn 3s ease forwards; }
+#hero h1 { font-size:3rem; color:#00796B; margin-bottom:10px; animation:fadeIn 2.2s ease forwards; }
+#hero p { font-size:1.2rem; color:#247e72; margin-bottom:30px; animation:fadeIn 2.4s ease forwards; }
+.btn-explore { padding:12px 30px; border:none; background:#dd5b05; color:#fff; font-weight:bold; border-radius:25px; cursor:pointer; transition:0.3s; animation:fadeIn 2.6s ease forwards; }
+.btn-explore:hover { background:#00796B; }
+
+/* Animated Background Shapes */
+.shape { position:absolute; border-radius:50%; opacity:0.5; animation:float 20s infinite ease-in-out; mix-blend-mode:screen; }
+@keyframes float { 0%{transform:translateY(0px) translateX(0px) rotate(0deg);} 50%{transform:translateY(-50px) translateX(30px) rotate(180deg);} 100%{transform:translateY(0px) translateX(0px) rotate(360deg);} }
+
+/* Tech icons floating */
+.tech-icon { position:absolute; width:40px; height:40px; opacity:0.7; animation:techFloat linear infinite; }
+@keyframes techFloat { 0%{transform:translateY(0);} 50%{transform:translateY(-30px);} 100%{transform:translateY(0);} }
+
+/* Sections */
+section { padding:100px 50px; position:relative; z-index:1; }
+.section h2 { font-size:2.5rem; color:#00796B; margin-bottom:40px; text-align:center; position:relative; }
+
+/* Card Grids */
+.skills-grid, .projects-grid, .solutions-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; }
+.card { background:#fff; padding:20px; border-radius:20px; transition:0.5s; box-shadow:0 10px 25px rgba(0,0,0,0.1); text-align:center; position:relative; overflow:hidden; transform-style:preserve-3d; animation:cardFloat 6s ease-in-out infinite alternate; }
+.card img { width:100%; height:150px; object-fit:cover; border-radius:15px; margin-bottom:15px; transition:0.3s; }
+.card:hover img { transform:scale(1.05); }
+.card h3 { color:#00796B; margin-bottom:10px; }
+.card p { color:#555; font-size:0.95rem; }
+
+/* Animations */
+@keyframes fadeIn { 0%{opacity:0; transform:translateY(30px);} 100%{opacity:1; transform:translateY(0);} }
+@keyframes cardFloat { 0%{transform:translateY(0px);} 100%{transform:translateY(-10px);} }
+
+/* Footer */
+footer { text-align:center; padding:50px 20px; background:#00796B; color:#fff; }
+footer a { color:#ffe0b2; }
+
+/* Responsive */
+@media(max-width:768px){ nav{flex-direction:column;gap:10px;} section{padding:80px 20px;} }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo">Rushda</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#solutions">Solutions</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#journey">Hungary</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+  <!-- Background floating shapes -->
+  <div class="shape" style="width:200px;height:200px;background:#db3400;top:10%;left:15%;"></div>
+  <div class="shape" style="width:150px;height:150px;background:#035f6b;top:50%;left:70%;"></div>
+  <div class="shape" style="width:100px;height:100px;background:#ddab07;top:30%;left:45%;"></div>
+
+  <!-- Tech floating icons (replace with your icon images) -->
+  <img class="tech-icon" src="icon1.png" style="top:20%;left:25%;">
+  <img class="tech-icon" src="icon2.png" style="top:60%;left:80%;">
+  <img class="tech-icon" src="icon3.png" style="top:40%;left:60%;">
+
+  <!-- Profile -->
+  <img src="my pro.png" alt="Rushda Esmael">
+  <h1>Rushda Esmael</h1>
+  <p>Graphics Designer • Coder • Teacher • Big Future Dreamer</p>
+  <button class="btn-explore" onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">Explore My World</button>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>My name is Rushda Esmael. I am from Kombolcha, Ethiopia — a place with limited resources but unlimited ambition. I am obsessed with computers, creativity, AI learning, futuristic design, and solving problems with technology.</p>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section">
+  <h2>My Skills</h2>
+  <div class="skills-grid">
+    <div class="card"><img src="skill1.jpg.png"><h3>Graphics Design</h3><p>Creating stunning posters, layouts, and visual identities</p></div>
+    <div class="card"><img src="skill2.jpg.png" alt=""><h3>Coding</h3><p>Building websites and solving problems with code</p></div>
+    <div class="card"><img src="skill3.jpg.png" alt=""><h3>Teaching</h3><p>Sharing knowledge and empowering others to learn</p></div>
+    <div class="card"><img src="skill4.jpg.png" alt=""><h3>AI Exploration</h3><p>Diving into artificial intelligence and future technologies</p></div>
+    <div class="card"><img src="skill5.jpg.png" alt=""><h3>Innovation</h3><p>Finding creative solutions to real-world challenges</p></div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+  <h2>My Projects</h2>
+  <div class="projects-grid">
+    <div class="card"><img src="project1.jpg.png.jpg" alt=""><h3>Café Poster</h3><p>Poster Design</p></div>
+    <div class="card"><img src="project2.jpg.png" alt=""><h3>Film Industry Poster</h3><p>Poster Design</p></div>
+    <div class="card"><img src="project3.jpg.png" alt=""><h3>Creative Modern Poster</h3><p>Poster Design</p></div>
+    <div class="card"><img src="project4.jpg.png" alt=""><h3>Clean Grid Layout</h3><p>Poster Design</p></div>
+  </div>
+</section>
+
+<!-- web -->
+<section id="projects" class="section">
+  <h2>Websites</h2>
+  <div class="projects-grid">
+    <div class="card"><img src="web1.png"><h3>Study Web</h3><p>Ethio Study is an online platform that helps Ethiopian students access study materials, past papers, tips, and guidance for smarter learning</p></div>
+    <div class="card"><img src="aiin.png" alt=""><h3>AI Indigo Pro Hub</h3><p>a platform offering 200+ AI tools, guides, and tutorials for smarter digital work.</p></div>
+    <div class="card"><img src="kom.png" alt=""><h3>E-commerce Promo</h3><p>A digital platform built to promote products, connect buyers and sellers, and simplify online shopping.</p></div>
+    <div class="card"><img src="port.png" alt=""><h3>Portfolio UI</h3><p>A clean, modern user interface design to showcase personal projects, skills, and achievements effectively</p></div>
+  </div>
+</section>  
+
+<!-- ux-->
+<section id="projects" class="section">
+  <h2>UI/UX Designs</h2>
+  <div class="projects-grid">
+    <div class="card"><img src="project1.jpg.png" alt=""><h3>Mobile App UI</h3><p> UI/UX Design</p></div>
+    <div class="card"><img src="matric.png" alt=""><h3>Matric Stars</h3><p>UI/UX Design</p></div>
+    <div class="card"><img src="produ.png" alt=""><h3>Creative Modern Poster</h3><p>UI/UX Design</p></div>
+  </div>
+</section>
+
+<!-- Solutions -->
+<section id="solutions" class="section">
+  <h2>What I Want to Solve</h2>
+  <p><h3>Upcoming Projects: Plan to enhance current platforms, explore new ideas, and deliver more innovative solutions.</h3></p>
+  <div class="solutions-grid">
+    <div class="card"><img src="zuret .png" alt=""><h3>Zuret Digital</h3><p>Platform helping local Ethiopian shops reach buyers with modern UI.</p></div>
+    <div class="card"><img src="stu ai.png" alt=""><h3>AI Learning Assistant</h3><p>Helps students get personalized learning support.</p></div>
+    <div class="card"><img src="digital.png" alt=""><h3>Kombolcha Innovation Map</h3><p>Shows opportunities, businesses, and creative spaces.</p></div>
+    <div class="card"><img src="free.png" alt=""><h3>Freelancer Starter Kit Ethiopia</h3><p>Guides youth step-by-step into freelance success.</p></div>
+  </div>
+</section>
+
+<!-- Teaching -->
+<section id="teaching" class="section">
+  <h2>My Teaching Journey</h2>
+  <p>I started teaching young adults in my community how to code and do graphic design. Teaching taught me patience, listening, communication, and adaptability.I started teaching young adults in my community how to code and do graphic design, and soon enough I found out that teaching is not as easy as it seems. When I did go too fast and lost a few of the students, I eventually learned to slow down, be patient, and adapt. In this way, it taught me about listening, communication, and patience, and at the same time, challenges were opportunities for me to learn and grow, while helping others learn more effectively.</p>
+</section>
+
+<!-- Journey -->
+<section id="journey" class="section">
+  <h2>From Ethiopia to Hungary</h2>
+  <p>From my small room in Kombolcha, Ethiopia to the innovation hubs of Hungary — this is my dream.
+
+I am fascinated by Hungary’s tech culture, AI developments, and progressive education environment.
+
+I want to explore tech labs, AI companies, universities, and creative design spaces.
+
+Hungary feels like the place that matches my ambitions, my curiosity, and my hunger to innovate.”</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>Contact me: <a href="mailto:rushdaesmael5@gmail.com">rushdaesmael5@gmail.com</a></p>
+  <p>© 2025 Rushda Esmael. Designed with ambition from Kombolcha, Ethiopia.</p>
+</footer>
+
+<script>
+// Smooth scroll
+document.querySelectorAll('nav a').forEach(link=>{
+  link.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
